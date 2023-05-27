@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading</title>
     <link rel="stylesheet" href="../estilos/geral.css">
     <link rel="stylesheet" href="../estilos/loading_style.css">
+    <title>Loading</title>
 </head>
+
 <body>
-    <div class="container">
-        <h2>Loading...</h2>
-        <div class="progress_bar">
-            
+    <div class="wrapper">
+        <div class="container">
+            <h2>Loading...</h2>
+            <div class="progress_bar">
+                <div class="load"></div>
+            </div>
         </div>
     </div>
+
+    <script>
+        const load = document.querySelector('.load')
+        
+        function updateProgressBar() {
+            
+            var duration = 5000; // Duração total em milissegundos
+            var interval = 10; // Intervalo de atualização em milissegundos
+            var increment = (interval / duration) * 100; // Incremento percentual
+
+            var progress = 0; // Progresso inicial
+
+            var timer = setInterval(function () {
+                progress += increment;
+                load.style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(timer);
+                    
+                    if (ano = 2023 && mes >= 6 && dia >= 12 || ano > 2022) {
+                        /* setTimeout(function () { */
+                            window.location.href = "login.html";
+                        /* }, 200); */
+                    } else {
+                        window.location.href = "error.html";
+                    }
+                }
+            }, interval);
+        }
+
+        updateProgressBar();
+
+        // Exemplo 1: Obter a data atual
+        var dataAtual = new Date();
+        console.log(dataAtual);
+
+        // Exemplo 2: Obter a data atual em formato de string
+        var dataAtualString = new Date().toString();
+        console.log(dataAtualString);
+
+        // Exemplo 3: Obter partes específicas da data
+        var dataAtual = new Date();
+        var ano = dataAtual.getFullYear();
+        var mes = dataAtual.getMonth() + 1; // Os meses são indexados a partir de zero
+        var dia = dataAtual.getDate();
+
+        console.log(ano, mes, dia);
+    </script>
 </body>
+
 </html>
