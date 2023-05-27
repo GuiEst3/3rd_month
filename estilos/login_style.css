@@ -82,3 +82,19 @@ button {
     font-size: 1em;
     font-weight: 600;
 }
+
+span {
+    width: 50%;
+
+}
+
+#error {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
