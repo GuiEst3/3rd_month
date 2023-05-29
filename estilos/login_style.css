@@ -117,10 +117,15 @@ span {
         align-items: center;
     }
 
+    h2 {
+        margin-top: -20px;
+        margin-bottom: -0px;
+    }
+
     .inputbox {
         position: relative;
         margin: 30px 0;
-        width: 100%;
+        width: 95%;
         border-bottom: 2px solid #fff;
     }
     
@@ -161,7 +166,7 @@ span {
     }
     
     button {
-        width: 100%;
+        width: 95%;
         height: 40px;
         border-radius: 20px;
         background: #fff;
@@ -172,15 +177,11 @@ span {
         font-weight: 600;
     }
     
-    /* span {
-        width: 50%;
-    } */
-    
     #error {
         position: absolute;
         width: 100%;
         left: 0;
-        margin: 10px auto;
+        margin: 14px auto;
         text-align: center;
         font-size: 15px;
         font-weight: 600;
