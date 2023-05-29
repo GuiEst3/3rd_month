@@ -1,5 +1,9 @@
-body, html{
+html{
     overflow: hidden;
+    height: 100vh;
+}
+
+body {
     height: 100vh;
 }
 
