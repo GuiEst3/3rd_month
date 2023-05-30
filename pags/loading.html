@@ -36,9 +36,9 @@
                 if (progress >= 100) {
                     clearInterval(timer);
 
-                    if (ano = 2023 && mes >= 6 && dia >= 12 || ano > 2022) {
+                    if (ano = 2023 && mes >= 6 && dia >= 12 || ano > 2023) {
                         setTimeout(function () {
-                        window.location.href = "login.html";
+                        window.location.href = "index.html";
                         }, 200);
                     } else {
                         window.location.href = "error.html";
@@ -49,18 +49,9 @@
 
         updateProgressBar();
 
-        // Exemplo 1: Obter a data atual
-        var dataAtual = new Date();
-        console.log(dataAtual);
-
-        // Exemplo 2: Obter a data atual em formato de string
-        var dataAtualString = new Date().toString();
-        console.log(dataAtualString);
-
-        // Exemplo 3: Obter partes específicas da data
         var dataAtual = new Date();
         var ano = dataAtual.getFullYear();
-        var mes = dataAtual.getMonth() + 1; // Os meses são indexados a partir de zero
+        var mes = dataAtual.getMonth() + 1;
         var dia = dataAtual.getDate();
 
         console.log(ano, mes, dia);

@@ -8,8 +8,6 @@ section {
 
 .form-box {
     position: relative;
-    /* width: 400px;
-    height: 450px; */
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
@@ -24,7 +22,7 @@ h2 {
     text-align: center;
 }
 
-/* .inputbox {
+.inputbox {
     position: relative;
     margin: 30px 0;
     width: 310px;
@@ -93,7 +91,7 @@ span {
     font-size: 15px;
     font-weight: 600;
     color: rgb(255, 0, 0);
-} */
+}
 
 
 @media screen and (max-width: 575px) {

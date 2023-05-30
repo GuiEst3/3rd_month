@@ -14,7 +14,7 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="index.html"  onsubmit="return check()">
+                <form action="loading.html"  onsubmit="return check()">
                     <h2>Login</h2>
                     <div class="inputbox">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -23,7 +23,7 @@
                             <circle cx="12" cy="8" r="5"></circle>
                             <path d="M20 21a8 8 0 1 0-16 0"></path>
                         </svg>
-                        <input type="text" id="user" required>
+                        <input type="text" id="user" required autocomplete="off">
                         <label for="">Usuário</label>
                     </div>
 
@@ -35,7 +35,7 @@
                             <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                         </svg>
-                        <input id="senha" type="password" required>
+                        <input id="senha" type="password" required autocomplete="off">
                         <label for="">Senha</label>
                     </div>
                     <button class="login" onclick="check()">Log in</button>
@@ -52,17 +52,10 @@
             var senha = document.getElementById("senha").value;
             var user = document.getElementById("user").value;
 
-            if (user == "bruna" && senha == "12345") {
+            if (user == "bruna" && senha == "22:22") {
                 return true
             } else {
                 document.getElementById("error").innerHTML = "Usuário ou senha inválidos."
-                /* const listItem = document.createElement("div");
-                listItem.classList.add("error");
-
-                listItem.innerHTML = `
-                    <h3>Usuário ou senha inválido. Tente novamente.</h3>
-                    `
-                formu.appendChild(listItem); */
                 return false
             }
         }

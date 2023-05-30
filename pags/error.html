@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/geral.css">
+    <link rel="stylesheet" href="../estilos/error_style.css">
     <title>Error</title>
 </head>
+
 <body>
-    <h1>bom dia</h1>
+    <div class="erro">
+        <h1>404</h1>
+        <h3>Page not found</h3>
+    </div>
+
+    <div id="message"></div>
+    <div id="auau">Página disponível em: ** dia(s)</div>
+    <script>
+        const formu = document.querySelector('form')
+
+        function check(ano, mes, dia) {
+            var text = ""
+            if (dia == 1) {
+                text = "Feliz nosso dia!"
+            } else if (ano = 2023 && mes == 6 && dia == 2) {
+                text = "Oi, dona do sorriso mais lindo desse mundo :) <br> > <strong>Te Amo</strong> <"
+            } else if (ano = 2023 && mes == 6 && dia == 3) {
+                text = "Às vezes tem uma mensagem aqui"
+            } else if (ano = 2023 && mes == 6 && dia == 4) {
+                text = "Vou colocar uma imagem de fundo amanhã"
+            } else if (ano = 2023 && mes == 6 && dia == 5) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/IMG_20230527_151608557.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center" 
+                text = "Gostou dessa foto?"
+            } else if (ano = 2023 && mes == 6 && dia == 6) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/IMG_20230527_151608557.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center"
+                text = "Hoje faz 4 meses desde que nos revemos pessoalmente"
+            } else if (ano = 2023 && mes == 6 && dia == 7) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center"
+                text = "Onde vamos nesse final de semana?"
+            } else if (ano = 2023 && mes == 6 && dia == 8) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center"
+                text = "OI MEU BEEM <3"
+            } else if (ano = 2023 && mes == 6 && dia == 9) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center"
+                text = "Hoje completamos 100 dias de namoro :)"
+            } else if (ano = 2023 && mes == 6 && dia == 10) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center"
+                text = "Ta... faltam dois dias"
+            } else if (ano = 2023 && mes == 6 && dia == 11) {
+                document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
+                document.body.style.backgroundSize = "cover" 
+                document.body.style.backgroundPosition = "center"
+                text = "UM DIAAA"
+            } 
+            document.getElementById("message").innerHTML = text
+        }
+
+        var dataAtual = new Date();
+        var ano = dataAtual.getFullYear();
+        var mes = dataAtual.getMonth() + 1;
+        var dia = dataAtual.getDate();
+
+        check(ano, mes, dia);
+    </script>
 </body>
+
 </html>
