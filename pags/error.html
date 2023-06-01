@@ -20,11 +20,12 @@
     <div id="auau">Página disponível em: ** dia(s)</div>
     <script>
         const formu = document.querySelector('form')
+        const auautext = document.querySelector("#auau")
 
         function check(ano, mes, dia) {
             var text = ""
             if (dia == 1) {
-                text = "Feliz nosso dia!"
+                text = "Feliz nosso dia! <3"
             } else if (ano = 2023 && mes == 6 && dia == 2) {
                 text = "Oi, dona do sorriso mais lindo desse mundo :) <br> > <strong>Te Amo</strong> <"
             } else if (ano = 2023 && mes == 6 && dia == 3) {
@@ -40,7 +41,7 @@
                 document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/IMG_20230527_151608557.jpg")'
                 document.body.style.backgroundSize = "cover" 
                 document.body.style.backgroundPosition = "center"
-                text = "Hoje faz 4 meses desde que nos revemos pessoalmente"
+                text = "Hoje faz 4 meses desde que nos revemos pessoalmente <br> > <strong>Te Amo</strong> <"
             } else if (ano = 2023 && mes == 6 && dia == 7) {
                 document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
                 document.body.style.backgroundSize = "cover" 
@@ -55,21 +56,23 @@
                 document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
                 document.body.style.backgroundSize = "cover" 
                 document.body.style.backgroundPosition = "center"
-                text = "Hoje completamos 100 dias de namoro :)"
+                text = "Hoje completamos 100 dias de namoro :) <br> > <strong>Te Amo</strong> <"
             } else if (ano = 2023 && mes == 6 && dia == 10) {
                 document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
                 document.body.style.backgroundSize = "cover" 
                 document.body.style.backgroundPosition = "center"
                 text = "Ta... faltam dois dias"
+                auau.innerHTML = "Página disponível em: 2 dias"
             } else if (ano = 2023 && mes == 6 && dia == 11) {
                 document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/1970-01-20-090655067.jpg")'
                 document.body.style.backgroundSize = "cover" 
                 document.body.style.backgroundPosition = "center"
                 text = "UM DIAAA"
+                auau.innerHTML = "Página disponível em: 1 dia"
             } 
             document.getElementById("message").innerHTML = text
         }
-
+        
         var dataAtual = new Date();
         var ano = dataAtual.getFullYear();
         var mes = dataAtual.getMonth() + 1;
