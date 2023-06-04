@@ -34,9 +34,7 @@ ul {
 
 li {
     flex: 0 0 auto;
-    background: #FFFFFF10;
-    /* height: 50px;
-    width: 280px; */
+    background: #FFFFFF12;
     border-radius: 17px;
     /* display: flex;
     justify-content: center;
@@ -54,7 +52,6 @@ li a{
     color: #FFF;
     font-weight: 400;
     font-size: 14px;
-    /* background: #ff0000; */
     text-transform: capitalize;
     height: 45px;
     width: 250px;
