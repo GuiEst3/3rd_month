@@ -71,3 +71,10 @@ a {
 
     border-radius: 5px;
 }
+
+iframe {
+    width: 100%;
+    border: none;
+    background: none;
+    
+}
