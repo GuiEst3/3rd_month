@@ -3,10 +3,6 @@
     overflow-x: hidden;
 }
 
-html, body{
-    overflow-x: hidden;
-}
-
 body {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/IMG_20230527_151608557.jpg");
@@ -22,24 +18,26 @@ h1 {
     font-size: 28px;
 }
 
+.slider {
+    height: calc(100vh - 140px);
+    overflow-x: auto;
+}
+
 ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: baseline;
     gap: 28px;
-    /* background: #440000; */
-    overflow-y: auto;
-    height: calc(100vh - 140px);
+    overflow-y: scroll;
 }
 
 li {
-    flex: 0 0 auto;
     background: #FFFFFF12;
     border-radius: 17px;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     box-shadow: 0 4px 20px #000000;
     border: 1px solid #FFF;
     backdrop-filter: blur(4px);
