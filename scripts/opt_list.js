@@ -71,27 +71,21 @@ const dates = [
     }
 ];
 
-const btns = document.querySelector(".buttons");
+const btns = document.querySelector(".slider");
+
+var dataAtual = new Date();
+var ano = dataAtual.getFullYear();
+var mes = dataAtual.getMonth() + 1;
+var dia = dataAtual.getDate();
+var hoje = new Date(ano, mes, dia)
+
+const but = document.createElement("ul");
+but.classList.add("buttons");
 
 for (let i = 0; i < dates.length; i++) {
-    renderBut(dates[i]);
-}
-
-function renderBut(info) {
-    var dataAtual = new Date();
-
-    var ano = dataAtual.getFullYear();
-    var mes = dataAtual.getMonth() + 1;
-    var dia = dataAtual.getDate();
-
-    var hoje = new Date(ano, mes, dia)
-
-    if (hoje >= info.date) {
-        const but = document.createElement("div");
-        but.classList.add("buttons");
-    
-        but.innerHTML = `
-        <li><a href="${info.arquivo}.html">${info.tit}</a></li>
+    if (hoje >= dates[i].date) {
+        but.innerHTML += `
+        <li><a href="${dates[i].arquivo}.html">${dates[i].tit}</a></li>
         `;
 
         btns.appendChild(but);
