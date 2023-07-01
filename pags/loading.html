@@ -35,6 +35,13 @@
 
                 if (progress >= 100) {
                     clearInterval(timer);
+                    
+                    var dataAtual = new Date();
+                    var ano = dataAtual.getFullYear();
+                    var mes = dataAtual.getMonth() + 1;
+                    var dia = dataAtual.getDate();
+                    var hoje = new Date(ano, mew, dia);
+                    var liberado = new Date(2023, 06, 12);
 
                     if (hoje >= liberado) {
                         setTimeout(function () {
@@ -49,12 +56,6 @@
 
         updateProgressBar();
 
-        var dataAtual = new Date();
-        var ano = dataAtual.getFullYear();
-        var mes = dataAtual.getMonth() + 1;
-        var dia = dataAtual.getDate();
-        var hoje = new Date(ano, mew, dia);
-        var liberado = new Date(2023, 06, 12);
 
         console.log(ano, mes, dia);
     </script>
