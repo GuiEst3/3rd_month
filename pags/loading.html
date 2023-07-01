@@ -36,7 +36,7 @@
                 if (progress >= 100) {
                     clearInterval(timer);
 
-                    if (ano = 2023 && mes >= 6 && dia >= 12 || ano > 2023) {
+                    if (hoje >= liberado) {
                         setTimeout(function () {
                         window.location.href = "opt_list.html";
                         }, 200);
@@ -53,6 +53,8 @@
         var ano = dataAtual.getFullYear();
         var mes = dataAtual.getMonth() + 1;
         var dia = dataAtual.getDate();
+        var hoje = new Date(ano, mew, dia);
+        var liberado = new Date(2023, 06, 12);
 
         console.log(ano, mes, dia);
     </script>
