@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, p, img {
+  animation: opacity 1.8s ease;
+}
+
+body {
+  background-color: #010101;
+  color: #FAFAFA;
+  height: 100vh;
+  font-family: 'Rochester';
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  position: absolute;
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  position: absolute;
+}
+
+.right {
+  position: absolute;
+  left: 38%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.8em;
+}
+
+p {
+  padding: 0 50px;
+  font-size: 2.4em;
+  text-align: justify;
+  text-indent: 38px;
+  margin: 20px 240px;
+}
+
+
+.prim,
+.seg,
+.ter {
+  height: 80vh;
+  animation: opacity 1.8s ease-out;
+}
+
+.prim,
+.ter {
+  position: absolute;
+  right: -150px;
+}
+
+.prim {
+  animation: anime 1.8s ease-out, opacity 1.8s ease-out;
+}
+
+.seg {
+  transform: translate(-24%, -0%);
+}
+
+.quar {
+  transform: translate(-10%, 0);
+  height: 85vh;
+}
+
+.video {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+
+@keyframes anime {
+  0% {
+    right: -450px;
+    transform: rotate(40deg);
+  }
+
+  100% {
+    right: -150px;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.95;
+  }
+}
